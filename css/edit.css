@@ -1,0 +1,195 @@
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  box-shadow: 0px -112px 214px 20px #F7D063;
+}
+.navbar img {
+  width: 3rem;
+}
+form {
+  padding: 3rem;
+}
+.edit-hed {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+.edit-hed a svg {
+  fill: #f7d063;
+  width: 2.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.edit-hed a svg:hover{
+  fill: #E9A426;
+}
+section,
+section div {
+  margin-bottom: 2rem;
+}
+section h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #f7d063;
+}
+textarea {
+    background: rgba(255, 255, 255, 0.103);
+    border: 0.5px solid #f7d063;
+    padding: 0.65rem 1rem;
+    height: 10rem;
+    width: 100%;
+    resize: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+.product-inventory {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.product-inventory input[type="text"],
+.product-inventory select {
+  background: none;
+  border: 0.5px solid #f7d063;
+  padding: 0.65rem 1rem;
+  color: #fff;
+  width: 10rem;
+  background: rgba(255, 255, 255, 0.103);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.delete-sec{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.save-btn{
+    display: flex;
+    margin: auto;
+    margin-top: 5rem;
+   
+}
+/* - - - -  */
+#image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#image-input{
+  margin-right: 1rem;
+  border: none;
+  outline: 0.5px solid #F7D063;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#image-input:hover {
+  background: #ffffff20;
+}
+
+.image-slot {
+  width: 5.5rem;
+  height: 5.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.delete-button svg{
+  transition: all 0.3;
+  cursor: pointer;
+}
+.delete-button svg:hover{
+  fill: #000;
+}
+
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+
+/* - - - -  */
+body{
+  position: relative;
+}
+.popup-bg{
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: #00000019;
+  backdrop-filter: blur(12px);
+  z-index: 1;
+}
+.popup{
+  width: 30rem;
+  height: 10rem;
+  background-color: #F7D063;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 2.3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup p{
+  color: #000;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.del-btns{
+  display: flex;
+  gap: 2rem;
+}
+
+.confirm, .cancel{
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.cancel{
+  background-color: #E9A426;
+  color: #000;
+}
+.confirm:hover{
+  background: #2b2634;
+}
+.cancel:hover{
+  background: #ae7710;
+}

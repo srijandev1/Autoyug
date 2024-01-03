@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(93deg, #000 1.4%, rgba(0, 0, 0, 0) 98.52%),
+    url("../img/hedimg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background: linear-gradient(
+    327deg,
+    rgba(0, 0, 0, 0.06) 4.77%,
+    rgba(255, 248, 248, 0.06) 93.72%
+  );
+
+  box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(22px);
+  width: 25rem;
+  padding: 4rem 0;
+}
+img {
+  width: 7rem;
+  margin-bottom: 2REM;
+}
+
+input {
+  width: 20rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 0.75px solid #f7d063;
+  color: #f7d063;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+input::placeholder{
+    color: #f7d063;
+    font-size: 1rem;
+    font-weight: 200;
+}
+input:focus{
+    outline: none;
+    background: #ffffff0f;
+
+}
+
+button {
+  margin-top: 3rem;
+  border: none;
+  background: #f7d063;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 20rem;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover{
+    background: #E9A426;
+}

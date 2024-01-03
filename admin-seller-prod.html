@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product (Admin)</title>
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/general.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="img/logo.png" alt="autoyou logo" />
+      </nav>
+      <input class="searchbar" type="text" placeholder="Search your product" />
+    </header>
+    <main>
+      <section class="product-sec">
+        <div class="prod-imgs">
+          <div class="all-imgs">
+            <div class="img-item img1"><img src="img/p/img1.webp" alt="" onclick="imgchange(this)"/></div>
+            <div class="img-item img2"><img src="img/p/img2.jpeg" alt="" onclick="imgchange(this)"/></div>
+            <div class="img-item img3"><img src="img/p/img3.jpeg" alt="" onclick="imgchange(this)"/></div>
+            <div class="img-item img4"><img src="img/p/img4.jpeg" alt="" onclick="imgchange(this)"/></div>
+          </div>
+          <div class="main-img">
+            <img id="mainImg" src="img/p/img1.webp" alt="" />
+          </div>
+        </div>
+        <div class="prod-infos">
+          <h1 class="prod-name">
+            KEYOZA Car Steering Wheel Cover Winter Comfortable Grip Anti-Slip
+            for All Car Use, Protector for car, Leather Automotive Car Steering
+            Wheel Cover-15Inch (Faux Leather)
+            <span class="seller-name">Brandan Leather Company</span>
+            <span class="stock stock-in">In Stock</span>
+            <span class="stock stock-out">Out of Stock</span>
+          </h1>
+          <p class="prod-price">$400 <span>$1500</span></p>
+          <button class="buy-btn">Update</button>
+        </div>
+      </section>
+      <section class="desc-sec">
+        <h2 class="dec-hed">Product Description</h2>
+        <p class="dec-para">
+          DRIVING PLEASURE】: Sport-style brings vivid colors into your car, the
+          steering wheel covers leather offers users a very comfortable driving
+          pleasure, while the steering wheel cover provides a visual enhancement
+          of the vehiceeood heat preservation. The
+          cover is perfect for a nice ride in any weather.EASY TO INSTALL】:
+          Extend the existing steering wheel, easy attachment. Just put the
+          cover on the steering wheel. Press and hold the upper part of the
+          cover and slowly lower it with both hands on both sides to
+          tighten.DRIVING PLEASURE】: Sport-style brings vivid colors into your
+          car, the steering wheel covers leather offers users a very comfortable
+          driving pleasure, while the steering wheel cover provides a visual
+          enhancement of the veh the cover and slowly lower it with both hands
+          on both sides to tighten.
+        </p>
+      </section>
+    </main>
+    <footer>
+        <section class="autoyou-bio">
+          <img src="img/logo.png" alt="autoyug logo" />
+          <p class="tag">JOIN THE AUTOYOUG MOVEMENT</p>
+        </section>
+      </footer>
+  </body>
+</html>
+
+<script>
+  function imgchange(x){
+    var mainImg = document.getElementById("mainImg")
+    mainImg.src = x.src
+  }
+</script>

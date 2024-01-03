@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Product Edit page</title>
+    <link rel="stylesheet" href="css/edit.css" />
+    <link rel="stylesheet" href="css/general.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="img/logo.png" alt="autoyou logo" />
+      </nav>
+    </header>
+    <form>
+      <h1 class="edit-hed">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48px"
+            viewBox="0 0 24 24"
+            width="48px"
+            fill="#000000"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" opacity=".87" />
+            <path
+              d="M16.62 2.99c-.49-.49-1.28-.49-1.77 0L6.54 11.3c-.39.39-.39 1.02 0 1.41l8.31 8.31c.49.49 1.28.49 1.77 0s.49-1.28 0-1.77L9.38 12l7.25-7.25c.48-.48.48-1.28-.01-1.76z"
+            />
+          </svg>
+        </a>
+        Add new product
+      </h1>
+      <section class="product-infor">
+        <div class="prod-title-input">
+          <h3>Product Title</h3>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Enter you product title"
+          ></textarea>
+        </div>
+        <div class="prod-dec-input">
+          <h3>Product Description</h3>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Enter you product description"
+          ></textarea>
+        </div>
+      </section>
+      <section class="product-inventory">
+        <div class="sell-price">
+          <h3>Selling Price</h3>
+          <input type="text" name="" id="" />
+        </div>
+        <div class="actual-price">
+          <h3>Actual Price</h3>
+          <input type="text" name="" id="" />
+        </div>
+        <div class="stock-status">
+          <h3>Selling Price</h3>
+          <select name="" id="">
+            <option value="In Stock">In Stock</option>
+            <option value="Out of Stock">Out of Stock</option>
+          </select>
+        </div>
+      </section>
+      <section class="product-imgs-upload">
+        <h3>Upload product phots</h3>
+          <div>
+            <input type="file" id="image-input" accept="image/*" multiple />
+            <button class="btn btn-sm" type="button" onclick="addImages()">Add Images</button>
+          </div>
+          <div id="image-container">
+            <!-- Image slots will be dynamically added here -->
+          </div>
+    
+      </section>
+      <section class="delete-sec">
+        <h3>Click here if you want to delete the product :</h3>
+        <button class="btn btn-sm" type="button" onclick="popup()">Delete</button>
+      </section>
+      <button class="btn btn-lg save-btn">Save</button>
+    </form>
+  </body>
+</html>
+<div class="popup-bg" id="pop-bg">
+  <div class="popup">
+    <p>You sure you want to delete ?</p>
+    <div class="del-btns">
+      <button class="confirm">Confirm</button>
+      <button onclick="popupClose()" class="cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+<script>
+  function addImages() {
+    const container = document.getElementById("image-container");
+    const input = document.getElementById("image-input");
+    const files = input.files;
+
+    if (container.childElementCount + files.length > 4) {
+      alert("You can only add up to 4 images.");
+      return;
+    }
+
+    for (let i = 0; i < files.length; i++) {
+      const slot = document.createElement("div");
+      slot.className = "image-slot";
+
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(files[i]);
+
+      const deleteButton = document.createElement("div");
+      deleteButton.className = "delete-button";
+      deleteButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="2rem" fill="#E9A426"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v10zM18 4h-2.5l-.71-.71c-.18-.18-.44-.29-.7-.29H9.91c-.26 0-.52.11-.7.29L8.5 4H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>`;
+      deleteButton.onclick = function () {
+        container.removeChild(slot);
+      };
+
+      slot.appendChild(img);
+      slot.appendChild(deleteButton);
+      container.appendChild(slot);
+    }
+  }
+
+
+</script>
+
+<script>
+  function popup() {
+    const popupBg = document.getElementById("pop-bg");
+    popupBg.style.display = "block";
+  }
+  function popupClose() {
+    const popupBg = document.getElementById("pop-bg");
+    popupBg.style.display = "none";
+  }
+</script>
